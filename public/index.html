@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sockets</title>
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+
+        <div class="main-container">
+            <h1>Sockets with Nodejs</h1>
+
+            <div class="form-container">
+                <div class="form-row">
+                    <h2 id="title1">Create user</h2>
+                    <form action="" id="userForm" class="form">
+                        <div class="form-input-column">
+                            <label for="id">Id:</label>
+                            <input type="text" id="id" placeholder="Id" readonly disabled>
+                        </div>
+                        <div class="form-input-column">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" placeholder="Write your name" required autofocus>
+                        </div>
+                        <div class="form-input-column">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" placeholder="Write your user" required>
+                        </div>
+                        <div class="form-input-column">
+                            <label for="password">Password:</label>
+                            <input type="text" id="password" placeholder="Write your password" required>
+                        </div>
+                        <span class="alert-message" id="feedback"></span>
+                        <div class="form-input-buttons">
+                            <button class="btn btn-save" id="btnSave">Create</button>
+                            <button class="btn btn-cancel" id="btnCancel">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="form-row">
+                    <h2>Users</h2>
+                    <div class="table-container">
+                        <table class="user-table">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Username</th>
+                                    <th>Password</th>
+                                    <th>Operations</th>
+                                </tr>
+                            </thead>
+                
+                            <tbody id="display-data-table">
+                
+                            </tbody>
+                        </table> 
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <script src="http://localhost:3001/socket.io/socket.io.min.js"></script>
+        <script src="./js//script.js"></script>
+    </body>
+</html>
